@@ -19,13 +19,13 @@ public class RecipeInput extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        Button button = (Button) findViewById(R.id.button); //creates the button to continue to the next activity
-        button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                save();
-            }
-        });
+//        Button button = (Button) findViewById(R.id.button); //creates the button to continue to the next activity
+//        button.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                save();
+//            }
+//        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -37,10 +37,10 @@ public class RecipeInput extends AppCompatActivity {
         });
     }
 
-    private void save() { //save this to sqlite database
-        Intent intent = new Intent(this, WelcomeActivity.class);
-        startActivity(intent);
-
-    }
+//    private void save() { //save this to sqlite database
+//        Intent intent = new Intent(this, WelcomeActivity.class);
+//        startActivity(intent);
+//
+//    }
 
 }

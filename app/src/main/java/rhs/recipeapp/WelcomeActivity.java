@@ -55,7 +55,7 @@ public class WelcomeActivity extends AppCompatActivity {
     }
 
     private void goToBrowseActivity() {
-        Intent intent = new Intent(this, BrowseActivity.class);
+        Intent intent = new Intent(this, RecipeInput.class); //temp change
         startActivity(intent);
     }
 

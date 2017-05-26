@@ -12,6 +12,8 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+    public static SQLiteDatabase db;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,13 +30,12 @@ public class MainActivity extends AppCompatActivity {
         DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
         // Get the database. If it does not exist, this is where it will
         // also be created.
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
+        db = dbHelper.getWritableDatabase();
     }
 
     private void goToSecondActivity() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
-
     }
 
     //Is Github actually working?!

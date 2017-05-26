@@ -24,13 +24,13 @@ public class RecipeInput extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
 
-        Button saveB = (Button) findViewById(R.id.button); //creates the button to save
-        saveB.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                saveToDatabase();
-            }
-        });
+//        Button saveB = (Button) findViewById(R.id.button); //creates the button to save
+//        saveB.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                saveToDatabase();
+//            }
+//        });
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class RecipeInput extends AppCompatActivity {
         values.put(DatabaseContract.MyRecipes.COlUMN_NAME_INGREDIENTS, "ingredients");
         values.put(DatabaseContract.MyRecipes.COLUMN_NAME_INSTRUCTIONS, "instructions");
         // Insert the new row, returning the primary key value of the new row
-        long newRowId = db.insert(DatabaseContract.MyRecipes.TABLE_NAME, null, values);
+        db.insert(DatabaseContract.MyRecipes.TABLE_NAME, null, values);
     }
 
 }

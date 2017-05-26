@@ -71,5 +71,13 @@
             android:layout_weight="0.40"
             android:text="mix all ingredients, bake for 10 min" />
 
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:ems="10"
+            android:id="@+id/printedRecipe"
+            android:hint="Recipe will print here." />
+
     </LinearLayout>
 </RelativeLayout>

@@ -158,4 +158,5 @@
     <string name="browse">Browse</string>
     <string name="welcome">Welcome!</string>
     <string name="title_activity_recipe_input">RecipeInput</string>
+    <string name="title_activity_display">Display</string>
 </resources>

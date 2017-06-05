@@ -28,6 +28,12 @@ public class RecipeInput extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 saveToDatabase();
+
+//                private void goToSecondActivity() {
+//                    Intent intent = new Intent(this, WelcomeActivity.class);
+//                    startActivity(intent);
+//
+//                }
             }
         });
 

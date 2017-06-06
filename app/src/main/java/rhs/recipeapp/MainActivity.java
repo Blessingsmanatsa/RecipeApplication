@@ -1,5 +1,6 @@
 package rhs.recipeapp;
 
+import android.content.ContentValues;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.support.v7.app.AppCompatActivity;
@@ -11,8 +12,6 @@ import android.widget.TextView;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
-    public static SQLiteDatabase db;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,17 +25,17 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        // Create new helper
-        DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
-        // Get the database. If it does not exist, this is where it will
-        // also be created.
-        db = dbHelper.getWritableDatabase();
+
     }
 
     private void goToSecondActivity() {
         Intent intent = new Intent(this, WelcomeActivity.class);
         startActivity(intent);
+
     }
+
+
+
 
     //Is Github actually working?!
     //Is github working for Rachel?!

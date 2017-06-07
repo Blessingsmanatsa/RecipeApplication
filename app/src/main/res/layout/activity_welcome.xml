@@ -26,17 +26,17 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:clickable="true"
-        android:backgroundTint="#FF1744"
+        android:backgroundTint="#7C95FF"
         android:textColor="@android:color/white" />
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:text="@string/categories"
-        android:id="@+id/categories"
+        android:text="Search"
+        android:id="@+id/search"
         android:clickable="true"
-        android:backgroundTint="#EF6C00"
+        android:backgroundTint="#B3C2FF"
         android:textColor="@android:color/white"/>
 
     <Button
@@ -46,27 +46,7 @@
         android:text="@string/favorites"
         android:id="@+id/favs"
         android:clickable="true"
-        android:backgroundTint="#FDD835"
-        android:textColor="@android:color/white"/>
-
-    <Button
-        android:text="@string/tips"
-        android:id="@+id/tips"
-        android:clickable="true"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:backgroundTint="#689F38"
-        android:textColor="@android:color/white"/>
-
-    <Button
-        android:text="@string/settings"
-        android:id="@+id/settings"
-        android:clickable="true"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1"
-        android:backgroundTint="#0091EA"
+        android:backgroundTint="#D9B3FF  "
         android:textColor="@android:color/white"/>
 
 </LinearLayout>

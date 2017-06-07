@@ -21,21 +21,13 @@ public class WelcomeActivity extends AppCompatActivity {
             }
         });
 
-        Button categories = (Button) findViewById(R.id.categories);
-        categories.setOnClickListener(new View.OnClickListener() {
+        /* Button categories = (Button) findViewById(R.id.search);
+        search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                goToCatActivity();
+                goToSearchActivity();
             }
-        });
-
-        Button tips = (Button) findViewById(R.id.tips);
-        tips.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToTipsActivity();
-            }
-        });
+        }); */
 
         Button favs = (Button) findViewById(R.id.favs);
         favs.setOnClickListener(new View.OnClickListener() {
@@ -44,38 +36,20 @@ public class WelcomeActivity extends AppCompatActivity {
                 goToFavsActivity();
             }
         });
-
-        Button settings = (Button) findViewById(R.id.settings);
-        settings.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                goToSettingsActivity();
-            }
-        });
     }
 
     private void goToBrowseActivity() {
-        Intent intent = new Intent(this, RecipeInput.class); //temp change
+        Intent intent = new Intent(this, BrowseActivity.class);
         startActivity(intent);
     }
 
-    private void goToCatActivity() {
-        Intent intent = new Intent(this, CatActivity.class);
+    /*private void goToSearchActivity() {
+        Intent intent = new Intent(this, SearchActivity.class);
         startActivity(intent);
-    }
-
-    private void goToTipsActivity() {
-        Intent intent = new Intent(this, TipsActivity.class);
-        startActivity(intent);
-    }
+    }*/
 
     private void goToFavsActivity() {
         Intent intent = new Intent(this, FavsActivity.class);
-        startActivity(intent);
-    }
-
-    private void goToSettingsActivity() {
-        Intent intent = new Intent(this, SettingsActivity.class);
         startActivity(intent);
     }
 }

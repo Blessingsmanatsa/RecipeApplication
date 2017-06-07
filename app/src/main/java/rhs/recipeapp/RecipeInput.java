@@ -15,6 +15,8 @@ import android.widget.Button;
 public class RecipeInput extends AppCompatActivity {
 
     private SQLiteOpenHelper mDbHelper = null;
+    final DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+    final SQLiteDatabase db = dbHelper.getWritableDatabase();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,17 +25,15 @@ public class RecipeInput extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
+
+
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 saveToDatabase();
+                goToSecondActivity();
 
-//                private void goToSecondActivity() {
-//                    Intent intent = new Intent(this, WelcomeActivity.class);
-//                    startActivity(intent);
-//
-//                }
             }
         });
 
@@ -41,10 +41,9 @@ public class RecipeInput extends AppCompatActivity {
 
     private void saveToDatabase() { //save this to sqlite database
         // Create new helper
-        DatabaseHelper dbHelper = new DatabaseHelper(getApplicationContext());
+
         // Get the database. If it does not exist, this is where it will
         // also be created.
-        SQLiteDatabase db = dbHelper.getWritableDatabase();
 
         // Create a new map of values, where column names are the keys
         ContentValues values = new ContentValues();
@@ -55,6 +54,12 @@ public class RecipeInput extends AppCompatActivity {
         values.put(DatabaseContract.MyRecipes.COLUMN_NAME_INSTRUCTIONS, "instructions");
         // Insert the new row, returning the primary key value of the new row
         db.insert(DatabaseContract.MyRecipes.TABLE_NAME, null, values);
+    }
+
+    private void goToSecondActivity() {
+        Intent intent = new Intent(this, Display.class);
+
+        startActivity(intent);
     }
 
 }

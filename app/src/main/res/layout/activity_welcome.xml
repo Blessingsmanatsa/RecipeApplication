@@ -26,7 +26,7 @@
         android:layout_weight="1"
         android:layout_width="match_parent"
         android:clickable="true"
-        android:backgroundTint="#7C95FF"
+        android:backgroundTint="@color/colorPrimaryDark"
         android:textColor="@android:color/white" />
 
     <Button
@@ -36,7 +36,7 @@
         android:text="Search"
         android:id="@+id/search"
         android:clickable="true"
-        android:backgroundTint="#B3C2FF"
+        android:backgroundTint= "@color/colorPrimary"
         android:textColor="@android:color/white"/>
 
     <Button
@@ -46,7 +46,7 @@
         android:text="@string/favorites"
         android:id="@+id/favs"
         android:clickable="true"
-        android:backgroundTint="#D9B3FF  "
+        android:backgroundTint="@color/colorAccent"
         android:textColor="@android:color/white"/>
 
 </LinearLayout>
